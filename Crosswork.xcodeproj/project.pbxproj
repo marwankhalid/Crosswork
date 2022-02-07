@@ -56,6 +56,10 @@
 		23B3D2DC27B0FBA700A897D5 /* Crosswork */ = {
 			isa = PBXGroup;
 			children = (
+				23B3D2F427B0FBD300A897D5 /* Views */,
+				23B3D2F327B0FBCC00A897D5 /* Models */,
+				23B3D2F227B0FBC000A897D5 /* Controllers */,
+				23B3D2F127B0FBB900A897D5 /* SupportingFiles */,
 				23B3D2DD27B0FBA700A897D5 /* AppDelegate.swift */,
 				23B3D2DF27B0FBA700A897D5 /* SceneDelegate.swift */,
 				23B3D2E127B0FBA700A897D5 /* ViewController.swift */,
@@ -65,6 +69,34 @@
 				23B3D2EB27B0FBA800A897D5 /* Info.plist */,
 			);
 			path = Crosswork;
+			sourceTree = "<group>";
+		};
+		23B3D2F127B0FBB900A897D5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		23B3D2F227B0FBC000A897D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23B3D2F327B0FBCC00A897D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23B3D2F427B0FBD300A897D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
