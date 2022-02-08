@@ -137,7 +137,7 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                 self.menuHeight.constant = 250
                 self.menuOpen = true
-                self.scrollViewContentheight.constant = 1200
+                self.scrollViewContentheight.constant = 1180
             }, completion: nil)
         }else {
             self.menuHeight.constant = 0
