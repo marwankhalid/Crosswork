@@ -13,6 +13,7 @@ class WebVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     
     var url:URL?
+    var defaultUrl = URL(string: "https://www.google.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,11 @@ class WebVC: UIViewController {
     }
     
     private func setWebview(){
-        webView.load(URLRequest(url: url!))
+        if url?.absoluteString == "" {
+            webView.load(URLRequest(url: defaultUrl!))
+        }else {
+            webView.load(URLRequest(url: url ?? defaultUrl!))
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

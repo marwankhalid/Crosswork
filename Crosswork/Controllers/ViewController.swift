@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         
         setupNavigationBar()
         setDesign()
+        setupGesture()
+        scrollViewContentheight.constant = 920
         
     }
     
@@ -53,6 +55,46 @@ class ViewController: UIViewController {
         self.bookMeetingB.layer.cornerRadius = 12.0
         self.learnMoreB.layer.cornerRadius = 12.0
     }
+    
+    private func setupGesture(){
+        searchL.isUserInteractionEnabled = true
+        meetL.isUserInteractionEnabled = true
+        investInMidasFundL.isUserInteractionEnabled = true
+        accessFundL.isUserInteractionEnabled = true
+        targetsL.isUserInteractionEnabled = true
+        hereL.isUserInteractionEnabled = true
+        self.searchL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapSearch)))
+        self.meetL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMeet)))
+        self.investInMidasFundL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapInvestInMidasFund)))
+        self.accessFundL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAccessFund)))
+        self.targetsL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTargets)))
+        self.hereL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHere)))
+    }
+    
+    @objc func tapSearch(){
+        pushToWebVC(url: URL(string: Constant.search)!, title: "Search")
+    }
+    
+    @objc func tapMeet(){
+        pushToWebVC(url: URL(string: Constant.meet), title: "Meet")
+    }
+    
+    @objc func tapInvestInMidasFund() {
+        pushToWebVC(url: URL(string: Constant.investInMidasFund)!, title: "INvest In MIdas Fund")
+    }
+    
+    @objc func tapAccessFund(){
+        pushToWebVC(url: URL(string: Constant.accessFund)!, title: "Access Fund")
+    }
+    
+    @objc func tapTargets(){
+        pushToWebVC(url: URL(string: Constant.targets)!, title: "Targets")
+    }
+    
+    @objc func tapHere(){
+        pushToWebVC(url: URL(string: Constant.here)!, title: "Here")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,61 +111,17 @@ class ViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
+    
+    private func pushToWebVC(url:URL?,title:String) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+        controller.modalPresentationStyle = .fullScreen
+        controller.url = url
+        controller.title = title
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 
-    @IBAction func searchB(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.search)
-        controller.title = "Search"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @IBAction func meetB(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: "")
-        controller.title = "Search"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @IBAction func investMidasFund(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.investInMidasFund)
-        controller.title = "Invest In Midas Fund"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @IBAction func accessFund(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.accessFund)
-        controller.title = "Access Fund"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    
-    @IBAction func targetsB(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.targets)
-        controller.title = "Targets"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @IBAction func hereB(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.here)
-        controller.title = "Here"
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
     @IBAction func learnMoreB(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
-        controller.modalPresentationStyle = .fullScreen
-        controller.url = URL(string: Constant.learnMore)
-        controller.title = "Learn More"
-        self.navigationController?.pushViewController(controller, animated: true)
+        pushToWebVC(url: URL(string: Constant.learnMore)!, title: "Learn More")
     }
     
     @IBAction func investB(_ sender: Any) {
@@ -139,10 +137,12 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                 self.menuHeight.constant = 250
                 self.menuOpen = true
+                self.scrollViewContentheight.constant = 1200
             }, completion: nil)
         }else {
             self.menuHeight.constant = 0
             self.menuOpen = false
+            self.scrollViewContentheight.constant = 920
         }
     }
     
