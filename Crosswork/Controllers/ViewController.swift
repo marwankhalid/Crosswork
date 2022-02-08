@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -34,6 +35,8 @@ class ViewController: UIViewController {
     
     private var lastContentOffset: CGFloat = 0
 
+    @IBOutlet weak var playVIdeoB: UIButton!
+    @IBOutlet weak var videoThumbnailI: UIImageView!
     var menuOpen = false
     
     override func viewDidLoad() {
@@ -43,7 +46,11 @@ class ViewController: UIViewController {
         setDesign()
         setupGesture()
         scrollViewContentheight.constant = 920
-        
+        if let thumbnailImage = getThumbnailImage(forUrl: URL(string: Constant.videoUrl)!) {
+            videoThumbnailI.image = thumbnailImage
+            videoThumbnailI.contentMode = .scaleToFill
+        }
+        playVIdeoB.layer.cornerRadius = playVIdeoB.frame.width / 2
     }
     
     private func setDesign(){
@@ -69,6 +76,10 @@ class ViewController: UIViewController {
         self.accessFundL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAccessFund)))
         self.targetsL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTargets)))
         self.hereL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHere)))
+    }
+    
+    @IBAction func playVideoB(_ sender: Any) {
+        
     }
     
     @objc func tapSearch(){
@@ -161,6 +172,20 @@ class ViewController: UIViewController {
         self.menuOpen = false
         // update the new position acquired
         self.lastContentOffset = scrollView.contentOffset.y
+    }
+    
+    func getThumbnailImage(forUrl url: URL) -> UIImage? {
+        let asset: AVAsset = AVAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60), actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+
+        return nil
     }
     
 }

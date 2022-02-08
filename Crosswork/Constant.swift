@@ -17,4 +17,6 @@ public class Constant {
     public static var learnMore = "https://crosswork.us/crosswork-midas-landing-page/"
     public static var invest = "https://www.notion.so/b8e841b85916447fad05193bafad622f#02af92fecf40466c8b25f5a44fa4d45b"
     
+    public static var videoUrl = "https://crosswork.us/wp-content/uploads/2021/05/Pre-IPO-Investing_-What-happens-after-an-investment-in-a-pre-IPO-fund-CrossWork-Midas-Pre-IPO-Fund.mp4"
+    
 }
