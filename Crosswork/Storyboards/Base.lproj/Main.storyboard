@@ -102,13 +102,16 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-OR-J08">
-                                                                        <rect key="frame" x="2" y="94" width="80" height="35"/>
+                                                                        <rect key="frame" x="2" y="94" width="80" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="80" id="3Oo-9C-m3a"/>
-                                                                            <constraint firstAttribute="height" constant="35" id="XQN-GS-69y"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="XQN-GS-69y"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                                                        <connections>
+                                                                            <action selector="searchB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zm6-m8-mR4"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -464,15 +467,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a1p-Xp-ech"/>
+                    <connections>
+                        <outlet property="searchB" destination="4k9-OR-J08" id="uVN-ol-Lep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="111.83035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--WebVC-->
         <scene sceneID="Yd5-OL-bNI">
             <objects>
-                <viewController id="GIk-55-92O" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebVC" id="GIk-55-92O" customClass="WebVC" customModule="Crosswork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P5i-B1-akG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,6 +501,9 @@
                             <constraint firstItem="MRq-mG-4Tg" firstAttribute="trailing" secondItem="oR2-A8-kED" secondAttribute="trailing" id="YsE-Fw-dgI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="oR2-A8-kED" id="PFK-Mh-WKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A95-DA-foz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
