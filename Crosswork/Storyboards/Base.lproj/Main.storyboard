@@ -252,7 +252,9 @@
                                                                             <constraint firstAttribute="height" constant="25" id="OER-OO-32S"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Access Fund"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Access Fund">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
                                                                         <connections>
                                                                             <action selector="accessFund:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VM6-95-MLr"/>
                                                                         </connections>
@@ -319,6 +321,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="Targets">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="targetsB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOw-Cx-mgr"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,6 +369,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="Here">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="hereB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bow-qI-oLB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -392,6 +400,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Invest">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="investB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLQ-ns-7KL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-8J-EcR">
                                                         <rect key="frame" x="212" y="0.0" width="162" height="45"/>
@@ -399,6 +410,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Book a Meeting">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="bookMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbW-VX-yGo"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -415,6 +429,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Learn More">
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="learnMoreB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRk-uy-R6L"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qU-fR-CiJ">
                                                 <rect key="frame" x="20" y="5" width="374" height="250"/>
@@ -477,6 +494,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="a1p-Xp-ech"/>
                     <connections>
+                        <outlet property="bookMeetingB" destination="fXs-8J-EcR" id="fu3-b8-TQf"/>
+                        <outlet property="investB" destination="SOr-ib-U5a" id="7ym-hb-B1M"/>
+                        <outlet property="learnMoreB" destination="SAk-7s-ysc" id="t5d-uE-gox"/>
                         <outlet property="searchB" destination="4k9-OR-J08" id="uVN-ol-Lep"/>
                     </connections>
                 </viewController>

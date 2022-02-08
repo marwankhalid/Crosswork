@@ -11,10 +11,24 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var searchB: UIButton!
     
+    @IBOutlet weak var bookMeetingB: UIButton!
+    @IBOutlet weak var investB: UIButton!
+    @IBOutlet weak var learnMoreB: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
+        setDesign()
+    }
+    
+    private func setDesign(){
+        self.investB.layer.borderWidth = 1.0
+        self.investB.layer.borderColor = UIColor.white.cgColor
+        self.investB.layer.cornerRadius = 12.0
+        self.bookMeetingB.layer.borderWidth = 1.0
+        self.bookMeetingB.layer.borderColor = UIColor.white.cgColor
+        self.learnMoreB.layer.cornerRadius = 12.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,8 +74,40 @@ class ViewController: UIViewController {
         let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
         controller.modalPresentationStyle = .fullScreen
         controller.url = URL(string: Constant.accessFund)
-        controller.title = "Invest In Midas Fund"
+        controller.title = "Access Fund"
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    @IBAction func targetsB(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+        controller.modalPresentationStyle = .fullScreen
+        controller.url = URL(string: Constant.targets)
+        controller.title = "Targets"
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func hereB(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+        controller.modalPresentationStyle = .fullScreen
+        controller.url = URL(string: Constant.here)
+        controller.title = "Here"
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    @IBAction func learnMoreB(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+        controller.modalPresentationStyle = .fullScreen
+        controller.url = URL(string: Constant.learnMore)
+        controller.title = "Learn More"
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func investB(_ sender: Any) {
+        
+    }
+    
+    @IBAction func bookMeeting(_ sender: Any) {
+        
     }
     
 }
