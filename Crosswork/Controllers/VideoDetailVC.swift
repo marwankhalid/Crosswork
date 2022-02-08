@@ -28,15 +28,16 @@ class VideoDetailVC: UIViewController {
         let url2 = URL(string: Constant.videoUrl)!
         //videoPlay(videoURL: url2)
         addPlayer(videoURLL: url2)
+        self.view.backgroundColor = .black
         
     }
     
     private func addView(){
         self.view.addSubview(playerView)
-        playerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        playerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        playerView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        playerView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.45).isActive = true
+        playerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        playerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        playerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        playerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
 
     private func addPlayer(videoURLL:URL){
