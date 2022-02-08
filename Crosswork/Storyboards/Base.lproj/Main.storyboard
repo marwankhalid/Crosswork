@@ -553,7 +553,12 @@
                         <outlet property="learnMoreB" destination="SAk-7s-ysc" id="t5d-uE-gox"/>
                         <outlet property="meetL" destination="49a-cC-bn2" id="cgP-zZ-neJ"/>
                         <outlet property="menuB" destination="DYY-Hc-1TZ" id="62a-K5-lkG"/>
+                        <outlet property="menuBookMeetingL" destination="shQ-bY-4xc" id="Eid-2P-UyW"/>
                         <outlet property="menuHeight" destination="QPF-An-Gug" id="rdM-Tg-hYt"/>
+                        <outlet property="menuHomeL" destination="T8q-gm-MO1" id="hOp-02-1ZU"/>
+                        <outlet property="menuInvestL" destination="tnJ-q3-sbK" id="qFB-Ho-n1o"/>
+                        <outlet property="menuIraL" destination="Cc4-rN-XoJ" id="lkQ-UV-txJ"/>
+                        <outlet property="menuLoginL" destination="GkP-Dq-7UD" id="22w-uH-zhz"/>
                         <outlet property="playVIdeoB" destination="GvE-XR-gJS" id="p7w-nC-OSV"/>
                         <outlet property="scrollView" destination="FnQ-a1-O2j" id="KN5-SL-Dc3"/>
                         <outlet property="scrollViewContentheight" destination="0nH-MQ-zDW" id="fj9-Kq-hUa"/>

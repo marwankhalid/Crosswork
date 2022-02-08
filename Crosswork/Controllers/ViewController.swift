@@ -25,6 +25,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var menuB: UIButton!
     @IBOutlet weak var playVIdeoB: UIButton!
     @IBOutlet weak var videoThumbnailI: UIImageView!
+    @IBOutlet weak var menuHomeL: UILabel!
+    @IBOutlet weak var menuInvestL: UILabel!
+    @IBOutlet weak var menuIraL: UILabel!
+    @IBOutlet weak var menuLoginL: UILabel!
+    @IBOutlet weak var menuBookMeetingL: UILabel!
     
     private var lastContentOffset: CGFloat = 0
     var menuOpen = false
@@ -36,11 +41,15 @@ class ViewController: UIViewController {
         setDesign()
         setupGesture()
         scrollViewContentheight.constant = 920
+        setDesign()
+        setupVideo()
+    }
+    
+    private func setupVideo(){
         if let thumbnailImage = getThumbnailImage(forUrl: URL(string: Constant.videoUrl)!) {
             videoThumbnailI.image = thumbnailImage
             videoThumbnailI.contentMode = .scaleToFill
         }
-        playVIdeoB.layer.cornerRadius = playVIdeoB.frame.width / 2
     }
     
     private func setDesign(){
@@ -51,6 +60,7 @@ class ViewController: UIViewController {
         self.bookMeetingB.layer.borderColor = UIColor.white.cgColor
         self.bookMeetingB.layer.cornerRadius = 12.0
         self.learnMoreB.layer.cornerRadius = 12.0
+        playVIdeoB.layer.cornerRadius = playVIdeoB.frame.width / 2
     }
     
     private func setupGesture(){
