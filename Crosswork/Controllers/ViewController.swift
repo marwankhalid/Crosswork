@@ -70,12 +70,44 @@ class ViewController: UIViewController {
         accessFundL.isUserInteractionEnabled = true
         targetsL.isUserInteractionEnabled = true
         hereL.isUserInteractionEnabled = true
+        
+        menuHomeL.isUserInteractionEnabled = true
+        menuInvestL.isUserInteractionEnabled = true
+        menuLoginL.isUserInteractionEnabled = true
+        menuIraL.isUserInteractionEnabled = true
+        menuBookMeetingL.isUserInteractionEnabled = true
         self.searchL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapSearch)))
         self.meetL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMeet)))
         self.investInMidasFundL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapInvestInMidasFund)))
         self.accessFundL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAccessFund)))
         self.targetsL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTargets)))
         self.hereL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHere)))
+        self.menuHomeL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMenuHome)))
+        self.menuInvestL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMenuInvest)))
+        self.menuLoginL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMenuLogin)))
+        self.menuIraL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMenuIra)))
+        self.menuBookMeetingL.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapMenuBookAMeeting)))
+        
+    }
+    
+    @objc func tapMenuHome(){
+        
+    }
+    
+    @objc func tapMenuInvest(){
+        
+    }
+    
+    @objc func tapMenuLogin(){
+        
+    }
+    
+    @objc func tapMenuIra(){
+        
+    }
+    
+    @objc func tapMenuBookAMeeting(){
+        
     }
     
     @IBAction func playVideoB(_ sender: Any) {
