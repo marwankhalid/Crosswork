@@ -10,33 +10,23 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var searchL: UILabel!
-    
     @IBOutlet weak var scrollViewContentheight: NSLayoutConstraint!
     @IBOutlet weak var meetL: UILabel!
-    
     @IBOutlet weak var investInMidasFundL: UILabel!
-    
     @IBOutlet weak var accessFundL: UILabel!
-    
     @IBOutlet weak var bookMeetingB: UIButton!
     @IBOutlet weak var investB: UIButton!
     @IBOutlet weak var learnMoreB: UIButton!
-    
     @IBOutlet weak var targetsL: UILabel!
     @IBOutlet weak var hereL: UILabel!
-    
     @IBOutlet weak var menuHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var menuB: UIButton!
-    
-    private var lastContentOffset: CGFloat = 0
-
     @IBOutlet weak var playVIdeoB: UIButton!
     @IBOutlet weak var videoThumbnailI: UIImageView!
+    
+    private var lastContentOffset: CGFloat = 0
     var menuOpen = false
     
     override func viewDidLoad() {
