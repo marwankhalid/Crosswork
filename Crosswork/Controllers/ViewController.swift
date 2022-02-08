@@ -111,7 +111,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playVideoB(_ sender: Any) {
-        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "VideoDetailVC") as! VideoDetailVC
+        controller.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func tapSearch(){
