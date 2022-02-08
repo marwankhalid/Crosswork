@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         pushToWebVC(url: URL(string: Constant.meet), title: "Meet")
     }
     
-    @objc func tapInvestInMidasFund() {
+    @objc func tapInvestInMidasFund(){
         pushToWebVC(url: URL(string: Constant.investInMidasFund)!, title: "INvest In MIdas Fund")
     }
     
@@ -95,7 +95,6 @@ class ViewController: UIViewController {
         pushToWebVC(url: URL(string: Constant.here)!, title: "Here")
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
@@ -105,7 +104,7 @@ class ViewController: UIViewController {
     private func setupNavigationBar(){
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = #colorLiteral(red: 0.1792391241, green: 0.2248817384, blue: 0.2625262439, alpha: 1)
+        appearance.backgroundColor = #colorLiteral(red: 0.1568627059, green: 0.1568627059, blue: 0.1568627059, alpha: 1)
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
@@ -125,11 +124,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func investB(_ sender: Any) {
-        
+        pushToWebVC(url: URL(string: Constant.invest)!, title: "Invest")
     }
     
     @IBAction func bookMeeting(_ sender: Any) {
-        
+        pushToWebVC(url: URL(string: Constant.meet)!, title: "Book A Meeting")
     }
     
     @IBAction func menuB(_ sender: Any) {
