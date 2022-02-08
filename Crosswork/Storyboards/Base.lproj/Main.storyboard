@@ -77,14 +77,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cGU-cI-KXI">
                                                 <rect key="frame" x="20" y="410" width="374" height="300"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-LK-rbw">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-LK-rbw">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLq-6n-X6W">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hod-iM-rBS">
-                                                                        <rect key="frame" x="2" y="10" width="158" height="28"/>
+                                                                        <rect key="frame" x="2" y="10" width="168" height="28"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="28" id="KrC-MM-8pa"/>
                                                                         </constraints>
@@ -93,7 +93,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-IPO company universe targets." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-Rc-ao1">
-                                                                        <rect key="frame" x="2" y="48" width="158" height="36"/>
+                                                                        <rect key="frame" x="2" y="48" width="168" height="36"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dJq-Pj-0fJ"/>
                                                                         </constraints>
@@ -127,10 +127,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-I8-Bgl">
-                                                                <rect key="frame" x="212" y="0.0" width="162" height="150"/>
+                                                                <rect key="frame" x="202" y="0.0" width="172" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM0-cP-Wfi">
-                                                                        <rect key="frame" x="2" y="10" width="158" height="28"/>
+                                                                        <rect key="frame" x="2" y="10" width="168" height="28"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="28" id="Fuq-EE-k9I"/>
                                                                         </constraints>
@@ -139,7 +139,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High level advisors and consultants" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8Z-V8-ffe">
-                                                                        <rect key="frame" x="2" y="48" width="158" height="36"/>
+                                                                        <rect key="frame" x="2" y="48" width="168" height="36"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Dil-gO-Ek2"/>
                                                                         </constraints>
@@ -148,13 +148,16 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLj-1e-eIr">
-                                                                        <rect key="frame" x="2" y="94" width="80" height="35"/>
+                                                                        <rect key="frame" x="2" y="94" width="80" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="35" id="NdV-M4-toi"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="NdV-M4-toi"/>
                                                                             <constraint firstAttribute="width" constant="80" id="yd8-fA-RQQ"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Meet"/>
+                                                                        <connections>
+                                                                            <action selector="meetB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28a-B0-4R2"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,14 +174,14 @@
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IcA-nf-r6M">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IcA-nf-r6M">
                                                         <rect key="frame" x="0.0" y="150" width="374" height="150"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79G-fR-9yB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="150"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="117+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wem-sS-cUU">
-                                                                        <rect key="frame" x="2" y="10" width="158" height="28"/>
+                                                                        <rect key="frame" x="2" y="10" width="173" height="28"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="28" id="Dgl-9p-gZT"/>
                                                                         </constraints>
@@ -187,7 +190,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return for 2020 IPO cohort of unicorns according to Crunchbase" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAB-xo-TYd">
-                                                                        <rect key="frame" x="2" y="48" width="158" height="67"/>
+                                                                        <rect key="frame" x="2" y="48" width="173" height="50.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="tFu-cy-j94"/>
                                                                         </constraints>
@@ -196,14 +199,17 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNw-vO-KsC">
-                                                                        <rect key="frame" x="2" y="120" width="158" height="30"/>
+                                                                        <rect key="frame" x="2" y="103.5" width="173" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="30" id="KAO-3r-25L"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="KAO-3r-25L"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Invest In Midas Fund">
                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                                         </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="investMidasFund:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PfG-Lb-Yoq"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,10 +226,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLR-gg-xv3">
-                                                                <rect key="frame" x="212" y="0.0" width="162" height="150"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-lv-IAC">
-                                                                        <rect key="frame" x="2" y="10" width="158" height="28"/>
+                                                                        <rect key="frame" x="2" y="10" width="173" height="28"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="28" id="elE-56-gXf"/>
                                                                         </constraints>
@@ -232,7 +238,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal sourcing network of executives, investors, VCs etc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC2-Od-iZv">
-                                                                        <rect key="frame" x="2" y="48" width="158" height="54"/>
+                                                                        <rect key="frame" x="2" y="48" width="173" height="54"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="2fE-gS-0tn"/>
                                                                         </constraints>
@@ -241,12 +247,15 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCe-4F-mmP">
-                                                                        <rect key="frame" x="2" y="112" width="158" height="35"/>
+                                                                        <rect key="frame" x="2" y="112" width="173" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="35" id="OER-OO-32S"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="OER-OO-32S"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Access Fund"/>
+                                                                        <connections>
+                                                                            <action selector="accessFund:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VM6-95-MLr"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -485,7 +494,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR2-A8-kED">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18823529780000001" green="0.2235293984" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -516,6 +525,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dHd-vR-OSJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AQr-OL-FB4"/>
