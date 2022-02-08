@@ -9,17 +9,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var searchB: UIButton!
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var searchL: UILabel!
+    
+    @IBOutlet weak var scrollViewContentheight: NSLayoutConstraint!
+    @IBOutlet weak var meetL: UILabel!
+    
+    @IBOutlet weak var investInMidasFundL: UILabel!
+    
+    @IBOutlet weak var accessFundL: UILabel!
     
     @IBOutlet weak var bookMeetingB: UIButton!
     @IBOutlet weak var investB: UIButton!
     @IBOutlet weak var learnMoreB: UIButton!
+    
+    @IBOutlet weak var targetsL: UILabel!
+    @IBOutlet weak var hereL: UILabel!
+    
+    @IBOutlet weak var menuHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var menuB: UIButton!
+    
+    private var lastContentOffset: CGFloat = 0
+
+    var menuOpen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         setDesign()
+        
     }
     
     private func setDesign(){
@@ -28,12 +50,14 @@ class ViewController: UIViewController {
         self.investB.layer.cornerRadius = 12.0
         self.bookMeetingB.layer.borderWidth = 1.0
         self.bookMeetingB.layer.borderColor = UIColor.white.cgColor
+        self.bookMeetingB.layer.cornerRadius = 12.0
         self.learnMoreB.layer.cornerRadius = 12.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        self.menuHeight.constant = 0
     }
     
     private func setupNavigationBar(){
@@ -108,6 +132,36 @@ class ViewController: UIViewController {
     
     @IBAction func bookMeeting(_ sender: Any) {
         
+    }
+    
+    @IBAction func menuB(_ sender: Any) {
+        if !self.menuOpen {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.menuHeight.constant = 250
+                self.menuOpen = true
+            }, completion: nil)
+        }else {
+            self.menuHeight.constant = 0
+            self.menuOpen = false
+        }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        print(self.scrollView.contentOffset.y)
+        if (self.lastContentOffset > scrollView.contentOffset.y) {
+            // move up
+            print("UP")
+        }
+        else if (self.lastContentOffset < scrollView.contentOffset.y) {
+           // move down
+            self.menuHeight.constant = 0
+            self.menuOpen = false
+            print("Hello")
+        }
+        self.menuHeight.constant = 0
+        self.menuOpen = false
+        // update the new position acquired
+        self.lastContentOffset = scrollView.contentOffset.y
     }
     
 }
