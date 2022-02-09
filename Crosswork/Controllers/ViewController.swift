@@ -43,7 +43,10 @@ class ViewController: UIViewController {
         scrollViewContentheight.constant = 920
         setDesign()
         setupVideo()
+        
     }
+    
+    
     
     private func setupVideo(){
         if let thumbnailImage = getThumbnailImage(forUrl: URL(string: Constant.videoUrl)!) {
@@ -91,23 +94,25 @@ class ViewController: UIViewController {
     }
     
     @objc func tapMenuHome(){
-        
+        self.menuHeight.constant = 0
+        self.menuOpen = false
+        self.scrollViewContentheight.constant = 920
     }
     
     @objc func tapMenuInvest(){
-        
+        pushToWebVC(url: URL(string: Constant.invest), title: "Invest")
     }
     
     @objc func tapMenuLogin(){
-        
+        pushToWebVC(url: URL(string: Constant.login)!, title: "Login")
     }
     
     @objc func tapMenuIra(){
-        
+        pushToWebVC(url: URL(string: Constant.ira)!, title: "IRA")
     }
     
     @objc func tapMenuBookAMeeting(){
-        
+        pushToWebVC(url: URL(string: Constant.bookMeeting)!, title: "Book A Meeting")
     }
     
     @IBAction func playVideoB(_ sender: Any) {
@@ -144,6 +149,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
         self.menuHeight.constant = 0
+        self.scrollViewContentheight.constant = 920
     }
     
     private func setupNavigationBar(){
