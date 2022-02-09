@@ -15,16 +15,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cust_back" translatesAutoresizingMaskIntoConstraints="NO" id="wPV-Sc-jSI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon_nm (1)" translatesAutoresizingMaskIntoConstraints="NO" id="TxY-Ze-daN">
+                                <rect key="frame" x="87" y="378" width="240" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="810-Zs-u97"/>
+                                    <constraint firstAttribute="height" constant="140" id="i3S-Jt-5eF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wPV-Sc-jSI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AJy-SS-FbA"/>
+                            <constraint firstItem="TxY-Ze-daN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hpj-tg-Bri"/>
+                            <constraint firstItem="TxY-Ze-daN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MYg-7w-41e"/>
+                            <constraint firstAttribute="bottom" secondItem="wPV-Sc-jSI" secondAttribute="bottom" id="alx-Zt-FoQ"/>
+                            <constraint firstItem="wPV-Sc-jSI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mfs-ck-G9K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wPV-Sc-jSI" secondAttribute="trailing" id="sHJ-QT-5za"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="app_icon_nm (1)" width="272" height="49"/>
+        <image name="cust_back" width="714" height="1246"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
