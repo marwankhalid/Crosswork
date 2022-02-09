@@ -22,5 +22,6 @@ public class Constant {
     public static var ira = "https://app.altoira.com/register"
     public static var login = "https://portal.crosswork.us/"
     public static var bookMeeting = "https://meetings.hubspot.com/steveo1/crosswork-pre-ipo-investor"
+    public static var investAgain = "https://share.hsforms.com/1aumYofX6Slapihgo2wtVGA38hds"
     
 }

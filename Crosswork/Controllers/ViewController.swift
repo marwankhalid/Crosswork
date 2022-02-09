@@ -175,7 +175,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func investB(_ sender: Any) {
-        pushToWebVC(url: URL(string: Constant.invest)!, title: "Invest")
+        pushToWebVC(url: URL(string: Constant.investAgain)!, title: "Invest")
     }
     
     @IBAction func bookMeeting(_ sender: Any) {
